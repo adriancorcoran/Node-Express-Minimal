@@ -12,8 +12,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/env", (req, res) => {
-  // const myKey = process.env.MY_KEY;
-  res.json(process.env);
+  const myKey = process.env.MY_KEY;
+  res.send(`This is my key: ${myKey}`);
+  // res.json(process.env);
 });
 
 app.listen(3000, () => {
